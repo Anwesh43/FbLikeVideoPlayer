@@ -1,4 +1,14 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
 import VideoPlayerComponent from './components/video_player_component'
-ReactDOM.render(<VideoPlayerComponent/>,document.getElementById('comp'))
+import LikeButtonComponent from './components/LikeButtonComponent'
+class FbLikeVpComponent extends Component {
+    render() {
+        return (<div>
+                <VideoPlayerComponent/>
+                <LikeButtonComponent/>
+            </div>)
+    }
+
+}
+ReactDOM.render(<FbLikeVpComponent/>,document.getElementById('comp'))
