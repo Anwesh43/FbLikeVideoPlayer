@@ -13,10 +13,10 @@ export default class LikeButton extends Component {
     }
     render() {
         const w = window.innerWidth,h = window.innerHeight
-        const x = w/20,y = -h/2+h/80
+        const x = w/12,y = -h/2+h/16
         const emojiStyle = {float:'left'}
         const emojiGroupStyle = {visibility:this.state.btnVisibility,WebkitTransform:`translateX(${-(Math.min(w,h)/60)*imgSources.length}px)translateY(${-Math.min(w,h)/30}px)`,transform:`translateX(${-(Math.min(w,h)/60)*imgSources.length}px)translateY(${-Math.min(w,h)/30}px)`}
-        const aStyle = {color:'black',background:'white'}
+        const aStyle = {color:'black',background:'#BDBDBD'}
         const aDivStyle={transform:`translateX(-${w/5}px)translateY(${h/20}px)`,WebkitTransform:`translateX(-${w/5}px)translateY(${h/20}px)`,MozTransform:`translateX(-${w/10}px)translateY(${h/20}px)`,OTransform:`translateX(-${w/10}px)translateY(${h/20}px)`}
         const divStyle = {WebkitTransform:`translateX(${x}px)translateY(${y}px)`,transform:`translateX(${x}px)translateY(${y}px)`,OTransform:`translateX(${x}px)translateY(${y}px)`,MozTransform:`translateX(${x}px)translateY(${y}px)`}
         const imgs = imgSources.map((imgSource)=><img src={`img/${imgSource}.png`} key= {`button_${imgSource}`} ref={`ref_${imgSource}`} width={`${Math.min(w,h)/15}px`} height={`${Math.min(w,h)/15}px`} style={emojiStyle}/>)
