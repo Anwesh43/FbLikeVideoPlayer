@@ -23,8 +23,10 @@ export default class VideoPlayerComponent extends Component {
     }
     render() {
         const w = window.innerWidth,h = window.innerHeight
-        const videoStyle={visibility:'hidden',position:'absolute',left:`${w/4}px`,top:`${h/4}px`}
-        const canvasStyle = {position:'absolute',left:`${w/4}px`,top:`${h/4}px`}
+
+        const transformStr = `translateX(${Math.min(w,h)/20}px)translateY(${-h/2}px)`
+        const videoStyle={visibility:'hidden'}
+        const canvasStyle = {transform:transformStr,WebkitTransform:transformStr,OTransform:transformStr,MozTransform:transformStr}
         return (<div>
                   <video  ref="v1" width={`${w/2}px`} height={`${h/2}px`} style={videoStyle}>
                   </video>
