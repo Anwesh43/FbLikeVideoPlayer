@@ -20,7 +20,6 @@ export default class LikeButton extends Component {
         const aDivStyle={transform:`translateX(-${w/5}px)translateY(${h/20}px)`,WebkitTransform:`translateX(-${w/5}px)translateY(${h/20}px)`,MozTransform:`translateX(-${w/10}px)translateY(${h/20}px)`,OTransform:`translateX(-${w/10}px)translateY(${h/20}px)`}
         const divStyle = {WebkitTransform:`translateX(${x}px)translateY(${y}px)`,transform:`translateX(${x}px)translateY(${y}px)`,OTransform:`translateX(${x}px)translateY(${y}px)`,MozTransform:`translateX(${x}px)translateY(${y}px)`}
         const imgs = imgSources.map((imgSource)=><img src={`img/${imgSource}.png`} key= {`button_${imgSource}`} ref={`ref_${imgSource}`} width={`${Math.min(w,h)/15}px`} height={`${Math.min(w,h)/15}px`} style={emojiStyle}/>)
-        console.log(imgs)
         return <div style={divStyle}>
                   <div style={emojiGroupStyle}>
                       {imgs}
