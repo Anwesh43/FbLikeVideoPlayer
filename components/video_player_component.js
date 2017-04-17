@@ -58,6 +58,14 @@ export default class VideoPlayerComponent extends Component {
         setInterval(()=>{
             context.clearRect(0,0,w,h)
             context.drawImage(video,0,0,w,h)
+            context.fillStyle = "#f44336"
+            context.globalAlpha = 0.5
+            context.fillRect(w/10,h/20,w/10,w/20)
+            context.font.replace(/\d{2}/,`${w/40}`)
+            const liveText = "Live"
+            context.fillStyle = "white"
+            context.globalAlpha = 1
+            context.fillText(liveText,w/10+w/20-context.measureText(liveText).width/2,h/20+h/40+10)
             this.emojis.forEach((emoji,index)=>{
                 emoji.render(context)
                 console.log(emoji.x)
